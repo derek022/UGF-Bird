@@ -1,0 +1,5 @@
+#	界面声音配置表				
+#	Id		AssetName	Priority	Volum
+#	int		string	int	float
+#	界面声音编号	策划备注	资源名称	优先级	音量
+	1	按钮点击	Click	0	1
