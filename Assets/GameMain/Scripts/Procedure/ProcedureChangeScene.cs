@@ -25,7 +25,7 @@ namespace FlappyBird
         }
         private const int MenuSceneId = 1;
 
-        private bool m_ChangeToMenu = false;
+        private int m_GoToMenu = 0;
         private bool m_IsChangeSceneComplete = false;
         private int m_BackgroundMusicId = 0;
 
@@ -58,8 +58,8 @@ namespace FlappyBird
             // 还原游戏速度
             GameEntry.Base.ResetNormalGameSpeed();
 
-            int sceneId = procedureOwner.GetData<VarInt32>("NextSceneId");
-            m_ChangeToMenu = sceneId == MenuSceneId;
+            int sceneId = procedureOwner.GetData<VarInt32>(Constant.ProcedureData.NextSceneId);
+            m_GoToMenu = sceneId ;
             IDataTable<DRScene> dtScene = GameEntry.DataTable.GetDataTable<DRScene>();
             DRScene drScene = dtScene.GetDataRow(sceneId);
             if (drScene == null)
@@ -91,14 +91,19 @@ namespace FlappyBird
                 return;
             }
 
-            if (m_ChangeToMenu)
+            switch(m_GoToMenu)
             {
-                ChangeState<ProcedureMenu>(procedureOwner);
+                case 1:
+                    ChangeState<ProcedureMenu>(procedureOwner);
+                    break;
+                case 2:
+                    ChangeState<ProcedureMain>(procedureOwner);
+                    break;
+
+                default:
+                    break;
             }
-            else
-            {
-                ChangeState<ProcedureMain>(procedureOwner);
-            }
+            
         }
 
         private void OnLoadSceneSuccess(object sender, GameEventArgs e)
