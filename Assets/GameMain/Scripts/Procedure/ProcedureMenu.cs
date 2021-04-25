@@ -1,4 +1,5 @@
-﻿using GameFramework.Fsm;
+﻿using GameFramework.Event;
+using GameFramework.Fsm;
 using GameFramework.Procedure;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,11 +20,15 @@ namespace FlappyBird
 
         public bool IsStartGame { get; set; }
 
+        private MenuForm m_MenuForm = null;
+
         protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
         {
             base.OnEnter(procedureOwner);
 
             IsStartGame = false;
+
+            GameEntry.Event.Subscribe(OpenUIFormSuccessEventArgs.EventId, OnOpenUIFormSuccess);
 
             GameEntry.UI.OpenUIForm(UIFormId.MenuForm, this);
         }
@@ -38,6 +43,31 @@ namespace FlappyBird
                 ChangeState<ProcedureChangeScene>(procedureOwner);
             }
         }
+
+        protected override void OnLeave(IFsm<IProcedureManager> procedureOwner, bool isShutdown)
+        {
+            base.OnLeave(procedureOwner, isShutdown);
+
+            if(m_MenuForm != null)
+            {
+                m_MenuForm.Close(isShutdown);
+                m_MenuForm = null;
+            }
+
+            GameEntry.Event.Unsubscribe(OpenUIFormSuccessEventArgs.EventId, OnOpenUIFormSuccess);
+        }
+
+        private void OnOpenUIFormSuccess(object sender, GameEventArgs e)
+        {
+            OpenUIFormSuccessEventArgs ne = (OpenUIFormSuccessEventArgs)e;
+            if (ne.UserData != this)
+            {
+                return;
+            }
+
+            m_MenuForm = (MenuForm)ne.UIForm.Logic;
+        }
+
     }
 
 }
