@@ -7,7 +7,6 @@ using UnityGameFramework.Runtime;
 namespace FlappyBird
 {
 
-
     public class SettingForm : UGuiForm
     {
 
@@ -30,7 +29,6 @@ namespace FlappyBird
         protected override void OnClose(bool isShutdown, object userData)
         {
             base.OnClose(isShutdown, userData);
-
 
         }
 
