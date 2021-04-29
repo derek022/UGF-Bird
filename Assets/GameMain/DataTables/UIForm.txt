@@ -5,4 +5,4 @@
 	1	菜单	MenuForm	Default	FALSE	FALSE
 	2	设置	SettingForm	Default	FALSE	FALSE
 	3	积分	ScoreForm	Default	FALSE	FALSE
-	4	游戏结束	GameOverForm		FALSE	TRUE
+	4	游戏结束	GameOverForm	Default	FALSE	TRUE
