@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<UnityGameFramework>
+  <ResourceCollection>
+    <Resources>
+      <Resource Name="configs" LoadType="0" Packed="False" />
+      <Resource Name="entities" LoadType="0" Packed="False" />
+    </Resources>
+    <Assets>
+      <Asset Guid="32cc0a76379e406429e27bc9194bb7d5" ResourceName="entities" />
+      <Asset Guid="3cbced714d814ab40a5e310c3a39c5b6" ResourceName="entities" />
+      <Asset Guid="49c1ea55692acef46a3c19fea11c09e4" ResourceName="entities" />
+      <Asset Guid="5ac7374419b2dc643b2f5799a376fa4b" ResourceName="configs" />
+      <Asset Guid="6fb428aead5cc2544bcb8eba2f6c631c" ResourceName="entities" />
+      <Asset Guid="e00cb953ee143384b9117175b6437715" ResourceName="configs" />
+      <Asset Guid="f0062c7d88e94a547bc557683d454be8" ResourceName="configs" />
+    </Assets>
+  </ResourceCollection>
+</UnityGameFramework>
