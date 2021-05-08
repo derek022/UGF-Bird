@@ -6,8 +6,7 @@
       <Resource Name="DataTables" LoadType="0" Packed="True" />
       <Resource Name="Entities" LoadType="0" Packed="True" />
       <Resource Name="Fonts" LoadType="0" Packed="True" />
-      <Resource Name="Localization/Dictionaries" Variant="en-us" LoadType="0" Packed="True" />
-      <Resource Name="Localization/Dictionaries" Variant="zh-cn" LoadType="0" Packed="True" />
+      <Resource Name="Localization/Dictionaries" LoadType="0" Packed="True" />
       <Resource Name="Music/Main" LoadType="0" Packed="True" />
       <Resource Name="Music/Menu" LoadType="0" Packed="True" />
       <Resource Name="Scenes" LoadType="0" Packed="True" />
@@ -20,7 +19,7 @@
     <Assets>
       <Asset Guid="0021dec38308db0439d77057c99d87b0" ResourceName="UI/UISprites" />
       <Asset Guid="0f1eaa8d8d54a8646a08647f3d1bbc94" ResourceName="Textures" />
-      <Asset Guid="14869ac0d4433f04db1704e39d03412e" ResourceName="Localization/Dictionaries" ResourceVariant="en-us" />
+      <Asset Guid="14869ac0d4433f04db1704e39d03412e" ResourceName="Localization/Dictionaries" />
       <Asset Guid="1b36e22526cb02c459b444a686db1119" ResourceName="Scenes" />
       <Asset Guid="1c1571443cd8eee4788547e4aef9323c" ResourceName="UI/UISprites" />
       <Asset Guid="32cc0a76379e406429e27bc9194bb7d5" ResourceName="Entities" />
@@ -38,7 +37,7 @@
       <Asset Guid="7cecc67065a3d90439c2cd21b652c459" ResourceName="UI/UIForms" />
       <Asset Guid="8e380a16959fe7b4fa8274edaa3f2800" ResourceName="Music/Menu" />
       <Asset Guid="970e0f1ca3fc94747a33cc9b0b07b05a" ResourceName="DataTables" />
-      <Asset Guid="9be2e1e45f4edd74c8764538ad306b78" ResourceName="Localization/Dictionaries" ResourceVariant="zh-cn" />
+      <Asset Guid="9be2e1e45f4edd74c8764538ad306b78" ResourceName="Localization/Dictionaries" />
       <Asset Guid="a00424f506f05c44f9ede7b4d37fe6fb" ResourceName="Configs" />
       <Asset Guid="a313e54605012214e87ef367aa548104" ResourceName="UI/UIForms" />
       <Asset Guid="a72369430fe6f0f408242ec237f3c262" ResourceName="Textures" />
